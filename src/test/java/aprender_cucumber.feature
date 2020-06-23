@@ -9,7 +9,17 @@ Cenário: Deve executar especificação
   Quando executá-lo
   Então a especificação deve finalizar com sucesso
 
-  Cenário: Deve incrementar contador
+Cenário: Deve incrementar contador
   Dado que o valor do contador é 15
   Quando eu incrementar em 3
   Então o valor do contador será 18
+  
+Cenário: Deve calcular atraso na entrega
+	Dado que a entrega é dia 05/07/2020
+	Quando a entrega atrasar em 2 dias
+	Então a entrega será efetuada em 07/07/2020
+	
+Cenário: Deve calcular atraso na entrega da China
+	Dado que a entrega é dia 05/07/2020
+	Quando a entrega atrasar em 2 meses
+	Então a entrega será efetuada em 05/09/2020
