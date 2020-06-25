@@ -1,15 +1,16 @@
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
+package br.ce.rogerioballestrin.steps;
 import java.util.Calendar;
 import java.util.Date;
 
 import org.junit.Assert;
 
+import br.ce.rogerioballestrin.converters.DateConverter;
+import cucumber.api.Transform;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
 
-public class AprenderCucumber {
+public class AprenderCucumberSteps {
 	@Dado("^que criei o arquivo corretamente$")
 	public void queCrieiOArquivoCorretamente() throws Throwable {
 		
@@ -44,13 +45,9 @@ public class AprenderCucumber {
 	
 	private Date entrega = new Date();
 	
-	@Dado("^que a entrega é dia (\\d+)/(\\d+)/(\\d+)$")
-	public void queAEntregaÉDia(int dia, int mes, int ano) {
-	    Calendar cal = Calendar.getInstance();
-	    cal.set(Calendar.DAY_OF_MONTH, dia);
-	    cal.set(Calendar.MONTH, mes-1);
-	    cal.set(Calendar.YEAR, ano);
-	    entrega = cal.getTime();
+	@Dado("^que a entrega é dia (.*)$")
+	public void queAEntregaÉDia(@Transform(DateConverter.class) Date data) {
+	    entrega = data;
 	}
 
 	@Quando("^a entrega atrasar em (\\d+) (dia|dias|mes|meses)$")
@@ -68,21 +65,18 @@ public class AprenderCucumber {
 	}
 
 	@Então("^a entrega será efetuada em (\\d{2}\\/\\d{2}\\/\\d{4})$")
-	public void aEntregaSeráEfetuadaEm(String data) {
-		DateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-		String dataFormatada = format.format(entrega);
-		Assert.assertEquals(data, dataFormatada);
+	public void aEntregaSeráEfetuadaEm(@Transform(DateConverter.class) Date data) {
+		Assert.assertEquals(entrega, data);
 	}
 	
 	@Dado("^que o ticket( especial)? é (A[A-F]{1}\\d{3})$")
 	public void queOTicketÉAF(String tipo, String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
 
 	}
 
-	@Dado("^que o valor da passagem é R\\$ (\\d+),(\\d+)$")
-	public void queOValorDaPassagemÉR$(int arg1, int arg2) throws Throwable {
-
+	@Dado("^que o valor da passagem é R\\$ (.*)$")
+	public void queOValorDaPassagemÉR$(Double numero) throws Throwable {
+		//Double possui um construtor que aceita string
 	}
 
 	@Dado("^que o nome do passageiro é \"(.{5,20})\"$")
