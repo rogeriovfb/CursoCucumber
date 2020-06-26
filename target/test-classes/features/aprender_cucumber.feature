@@ -1,4 +1,5 @@
 # language: pt
+
 Funcionalidade: Aprender Cucumber
   Como um aluno
   Eu quero aprender a utilizar Cucumber
@@ -14,6 +15,7 @@ Cenário: Deve incrementar contador
   Quando eu incrementar em 3
   Então o valor do contador será 18
   
+
 Cenário: Deve calcular atraso na entrega
 	Dado que a entrega é dia 05/07/2020
 	Quando a entrega atrasar em 2 dias
@@ -39,10 +41,11 @@ Cenário: Deve reaproveitar os steps "Dado" do cenário anterior
     Dado que o nome do passageiro é "Cicrano de Oliveira"
     Dado que o telefone do passageiro é 9888-8888
 
-#Cenário: Deve negar todos os steps "Dado" dos cenários anteriores
-    #Dado que o ticket é CD123
-    #Dado que o ticket é AG1234
-    #Dado que o valor da passagem é R$ 1.1345,56
-    #Dado que o nome do passageiro é "Beltrano Souza Matos de Alcântara Azevedo"
-    #Dado que o telefone do passageiro é 1234-5678
-    #Dado que o telefone do passageiro é 999-2223 
+@ignore
+Cenário: Deve negar todos os steps "Dado" dos cenários anteriores
+    Dado que o ticket é CD123
+    Dado que o ticket é AG1234
+    Dado que o valor da passagem é R$ 1.1345,56
+    Dado que o nome do passageiro é "Beltrano Souza Matos de Alcântara Azevedo"
+    Dado que o telefone do passageiro é 1234-5678
+    Dado que o telefone do passageiro é 999-2223 
