@@ -3,13 +3,17 @@ package br.ce.rogerioballestrin.steps;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 
 import org.junit.Assert;
 
 import br.ce.rogerioballestrin.entidades.Filme;
 import br.ce.rogerioballestrin.entidades.NotaAluguel;
+import br.ce.rogerioballestrin.entidades.TipoAluguel;
 import br.ce.rogerioballestrin.servicos.AluguelService;
 import br.ce.rogerioballestrin.utils.DateUtils;
+import cucumber.api.DataTable;
+import cucumber.api.PendingException;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -20,7 +24,7 @@ public class AlugarFilmeSteps {
 	private AluguelService aluguel = new AluguelService();
 	private NotaAluguel nota;
 	private String erro;
-	private String tipoAluguel;
+	private TipoAluguel tipoAluguel;
 	
 	@Dado("^um filme com estoque de (\\d+) unidades$")
 	public void umFilmeComEstoqueDeUnidades(int arg1) throws Throwable {
@@ -31,6 +35,17 @@ public class AlugarFilmeSteps {
 	@Dado("^que o preço do aluguel seja R\\$ (\\d+)$")
 	public void queOPreçoDoAluguelSejaR$(int arg1) throws Throwable {
 		filme.setAluguel(arg1);
+	}
+	
+	@Dado("^um filme$")
+	public void umFilme(DataTable table) throws Throwable {
+	    Map<String, String> map = table.asMap(String.class, String.class);
+	    filme = new Filme();
+	    filme.setEstoque(Integer.parseInt(map.get("estoque")));
+	    filme.setAluguel(Integer.parseInt(map.get("preco")));
+	    String tipo = map.get("tipo");
+	    tipoAluguel = tipo.equals("semanal")? TipoAluguel.SEMANAL: tipo.equals("extendido")? TipoAluguel.EXTENDIDO: TipoAluguel.COMUM;
+
 	}
 
 	@Quando("^alugar$")
@@ -60,7 +75,7 @@ public class AlugarFilmeSteps {
 	
 	@Dado("^que o tipo do aluguel seja (.*)$")
 	public void queOTipoDoAluguelSejaExtendido(String tipo) throws Throwable {
-	    tipoAluguel = tipo;
+	    tipoAluguel = tipo.equals("semanal")? TipoAluguel.SEMANAL: tipo.equals("extendido")? TipoAluguel.EXTENDIDO: TipoAluguel.COMUM;
 	}
 
 	@Então("^a data de entrega será em (\\d+) dias?$")
