@@ -62,6 +62,16 @@ public void selecionoSalvar() throws Throwable {
 @Então("^a conta é inserida com sucesso$")
 public void aContaÉInseridaComSucesso() throws Throwable {
     Assert.assertEquals("Conta adicionada com sucesso!", driver.findElement(By.xpath("//div[@class='alert alert-success']")).getText());
+}
+
+@Então("^sou notificado que o nome da conta é obrigatório$")
+public void souNotificadoQueONomeDaContaÉObrigatório() throws Throwable {
+    Assert.assertEquals("Informe o nome da conta", driver.findElement(By.xpath("//div[@class='alert alert-danger']")).getText());
+}
+
+@Então("^sou notificado que já existe uma conta com esse nome$")
+public void souNotificadoQueJáExisteUmaContaComEsseNome() throws Throwable {
+    Assert.assertEquals("Já existe uma conta com esse nome!", driver.findElement(By.xpath("//div[@class='alert alert-danger']")).getText());
 
 }
 
