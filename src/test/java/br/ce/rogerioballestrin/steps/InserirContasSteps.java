@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import cucumber.api.java.After;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Então;
 import cucumber.api.java.pt.Quando;
@@ -73,6 +74,11 @@ public void souNotificadoQueONomeDaContaÉObrigatório() throws Throwable {
 public void souNotificadoQueJáExisteUmaContaComEsseNome() throws Throwable {
     Assert.assertEquals("Já existe uma conta com esse nome!", driver.findElement(By.xpath("//div[@class='alert alert-danger']")).getText());
 
+}
+
+@After
+public void fecharBrowser() {
+	driver.quit();
 }
 
 
