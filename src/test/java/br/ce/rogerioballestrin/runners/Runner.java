@@ -1,5 +1,9 @@
 package br.ce.rogerioballestrin.runners;
+import org.junit.BeforeClass;
 import org.junit.runner.RunWith;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
@@ -17,5 +21,16 @@ import cucumber.api.junit.Cucumber;
 		strict = false
 		)
 public class Runner {
-	
+
+	@BeforeClass
+	public static void reset() {
+		WebDriver driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rogerio Ballestrin\\eclipse-workspace\\CursoCucumber\\chromedriver.exe");
+		driver.get("https://srbarriga.herokuapp.com");
+	    driver.findElement(By.id("email")).sendKeys("b@b.com");
+		driver.findElement(By.id("senha")).sendKeys("b");
+	    driver.findElement(By.tagName("button")).click();
+	    driver.findElement(By.linkText("reset")).click();
+	    driver.quit();
+	}
 }
