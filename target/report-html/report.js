@@ -122,7 +122,7 @@ formatter.match({
   "location": "InserirContasSteps.queEstouAcessandoAAplicação()"
 });
 formatter.result({
-  "duration": 4804302100,
+  "duration": 4859995100,
   "status": "passed"
 });
 formatter.match({
@@ -135,7 +135,7 @@ formatter.match({
   "location": "InserirContasSteps.informoOUsuário(String)"
 });
 formatter.result({
-  "duration": 136820600,
+  "duration": 88238000,
   "status": "passed"
 });
 formatter.match({
@@ -148,35 +148,35 @@ formatter.match({
   "location": "InserirContasSteps.aSenha(String)"
 });
 formatter.result({
-  "duration": 141932800,
+  "duration": 70131600,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoEntrar()"
 });
 formatter.result({
-  "duration": 659080800,
+  "duration": 1049558800,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.visualizoAPáginaInicial()"
 });
 formatter.result({
-  "duration": 32367000,
+  "duration": 30397100,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoContas()"
 });
 formatter.result({
-  "duration": 57389100,
+  "duration": 57805600,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoAdicionar()"
 });
 formatter.result({
-  "duration": 298514600,
+  "duration": 288238600,
   "status": "passed"
 });
 formatter.scenario({
@@ -218,14 +218,14 @@ formatter.match({
   "location": "InserirContasSteps.informoAConta(String)"
 });
 formatter.result({
-  "duration": 98105800,
+  "duration": 112830000,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoSalvar()"
 });
 formatter.result({
-  "duration": 410472100,
+  "duration": 417335700,
   "status": "passed"
 });
 formatter.match({
@@ -238,11 +238,15 @@ formatter.match({
   "location": "InserirContasSteps.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 27104300,
+  "duration": 28693300,
   "status": "passed"
 });
 formatter.after({
-  "duration": 613451900,
+  "duration": 277322000,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 653399300,
   "status": "passed"
 });
 formatter.background({
@@ -291,7 +295,7 @@ formatter.match({
   "location": "InserirContasSteps.queEstouAcessandoAAplicação()"
 });
 formatter.result({
-  "duration": 4599980300,
+  "duration": 4721526100,
   "status": "passed"
 });
 formatter.match({
@@ -304,7 +308,7 @@ formatter.match({
   "location": "InserirContasSteps.informoOUsuário(String)"
 });
 formatter.result({
-  "duration": 119542000,
+  "duration": 109377500,
   "status": "passed"
 });
 formatter.match({
@@ -317,35 +321,35 @@ formatter.match({
   "location": "InserirContasSteps.aSenha(String)"
 });
 formatter.result({
-  "duration": 76935900,
+  "duration": 81169900,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoEntrar()"
 });
 formatter.result({
-  "duration": 721151700,
+  "duration": 717860300,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.visualizoAPáginaInicial()"
 });
 formatter.result({
-  "duration": 35211600,
+  "duration": 29578500,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoContas()"
 });
 formatter.result({
-  "duration": 57238800,
+  "duration": 57270900,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoAdicionar()"
 });
 formatter.result({
-  "duration": 279984900,
+  "duration": 317632800,
   "status": "passed"
 });
 formatter.scenario({
@@ -387,14 +391,14 @@ formatter.match({
   "location": "InserirContasSteps.informoAConta(String)"
 });
 formatter.result({
-  "duration": 67135200,
+  "duration": 55613500,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoSalvar()"
 });
 formatter.result({
-  "duration": 276628600,
+  "duration": 323302600,
   "status": "passed"
 });
 formatter.match({
@@ -407,11 +411,15 @@ formatter.match({
   "location": "InserirContasSteps.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 31285800,
+  "duration": 31390600,
   "status": "passed"
 });
 formatter.after({
-  "duration": 624650800,
+  "duration": 312533600,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 604440500,
   "status": "passed"
 });
 formatter.background({
@@ -460,7 +468,7 @@ formatter.match({
   "location": "InserirContasSteps.queEstouAcessandoAAplicação()"
 });
 formatter.result({
-  "duration": 6876413100,
+  "duration": 4765875500,
   "status": "passed"
 });
 formatter.match({
@@ -473,7 +481,7 @@ formatter.match({
   "location": "InserirContasSteps.informoOUsuário(String)"
 });
 formatter.result({
-  "duration": 141571700,
+  "duration": 111841300,
   "status": "passed"
 });
 formatter.match({
@@ -486,35 +494,35 @@ formatter.match({
   "location": "InserirContasSteps.aSenha(String)"
 });
 formatter.result({
-  "duration": 219800900,
+  "duration": 98768200,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoEntrar()"
 });
 formatter.result({
-  "duration": 706704800,
+  "duration": 705331000,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.visualizoAPáginaInicial()"
 });
 formatter.result({
-  "duration": 30775300,
+  "duration": 30452300,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoContas()"
 });
 formatter.result({
-  "duration": 63699400,
+  "duration": 68889700,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoAdicionar()"
 });
 formatter.result({
-  "duration": 316537900,
+  "duration": 284844900,
   "status": "passed"
 });
 formatter.scenario({
@@ -556,14 +564,14 @@ formatter.match({
   "location": "InserirContasSteps.informoAConta(String)"
 });
 formatter.result({
-  "duration": 116783700,
+  "duration": 105290400,
   "status": "passed"
 });
 formatter.match({
   "location": "InserirContasSteps.selecionoSalvar()"
 });
 formatter.result({
-  "duration": 327300500,
+  "duration": 329818300,
   "status": "passed"
 });
 formatter.match({
@@ -576,11 +584,15 @@ formatter.match({
   "location": "InserirContasSteps.receboAMensagem(String)"
 });
 formatter.result({
-  "duration": 31033000,
+  "duration": 28533900,
   "status": "passed"
 });
 formatter.after({
-  "duration": 622291700,
+  "duration": 271462500,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 627017200,
   "status": "passed"
 });
 });
